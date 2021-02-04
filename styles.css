@@ -1,0 +1,521 @@
+:root {
+    --main: #C1203B;
+    --main-light: #D44559;
+    --secondary: #1B2F33;
+    --name-color: #fff;
+    --title-color: #fff;
+    --text-color: #fff;
+    --back-color: 27, 47, 51;
+    --back-color-dark:#142326;
+    --main-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+html {
+    background-image: url(./media/back.jpeg);
+}
+
+body {
+    background-color: rgba(var(--back-color),.99);
+    background-size: cover;
+    overflow-x: hidden;
+    font-family: var(--main-font);
+    height: 240vh;
+}
+
+.watermark {
+    position: absolute;
+    top: 150vh;
+    left: 20vw;
+    opacity: .3;
+}
+
+#XMLID16 {
+    fill: var(--back-color-dark) !important;
+}
+
+.watermark svg {
+    width: 70rem;
+    height: auto;
+}
+
+.main {
+    padding: 2rem;
+    font-family: var(--main-font);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    position: fixed;
+}
+
+
+
+.circle {
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 8px solid var(--main);
+    background-color: #fff;
+    margin-right: -4rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 7px;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 3.5rem;
+    position: relative;
+    color: var(--main);
+    /*animation: spinmerightround 4s linear infinite;*/
+}
+
+.box1 {
+    width: 25rem;
+    height: 20rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 100000;
+    animation: turnon 300ms linear .2s forwards;
+}
+
+.box2 {
+    width: 25rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    animation: turnon 300ms linear forwards;
+    z-index: 100000;
+}
+
+.circle h6 {
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rightarrow {
+    display: block;
+    animation: arrowsright 5s linear infinite;
+    order: 2;
+}
+
+.one {
+    margin-left: -100%;
+}
+
+.rightarrow2 {
+    
+    order: 1;
+}
+
+.leftarrow {
+    display: block;
+    animation: arrowsleft 5s linear infinite;
+}
+
+.leftarrow2 {
+}
+
+.fulllogo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    z-index: 10000;
+    top: 35%;
+    left: 1rem;
+}
+
+.rightar,
+.leftar {
+    fill: var(--secondary);
+    height: 5.8rem;
+}
+
+.rightar {
+    animation: cursorani 1s steps(2) alternate infinite;
+}
+
+.line {
+    fill: var(--secondary);
+    height: 5.8rem;
+    animation: cursorani 2s steps(2) alternate infinite;
+}
+
+.logo {
+    fill: var(--main);
+    height: 5rem;
+}
+
+.cusror {
+    background-color: #000;
+    height: 5.8rem;
+    width: 2px;
+    animation: cursorani2 300ms steps(2) alternate infinite;
+}
+
+.namepanel {
+    width: 55rem;
+    height: 14rem;
+    background-color: var(--main);
+    /*background: linear-gradient(144deg, rgba(193,32,59,1) 0%, rgba(212,69,89,1) 100%);*/
+    z-index: 1;
+    border-radius: 5px;
+    display: flex;
+    padding-left: 6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: inherit;
+    position: relative;
+    animation: namepanelani .5s;
+}
+
+.backmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--main-font);
+    color: #a6112a;
+}
+
+.name {
+    font-size: 3.5rem;
+    opacity: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--name-color);
+    font-family: inherit;
+    animation: namepaneltextani .8s linear .5s forwards;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+}
+
+.title h4 {
+    opacity: 0;
+    font-family: inherit;
+    color: var(--name-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-right: .4rem;
+    font-weight: 300;
+    animation: namepaneltextani 1s linear .6s forwards;
+}
+
+.content {
+    padding: 5rem 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: inherit;
+}
+
+.sidepanel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: inherit;
+    width: 22rem;
+}
+
+.sidesection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: inherit;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    font-family: inherit;
+    width: 100%;
+
+    margin-bottom: 1.5rem;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--title-color);
+    font-family: inherit;
+}
+
+.title-underline {
+    background-color: var(--main);
+    height: .7rem;
+    width: 100%;
+}
+
+.section-content {
+    font-family: inherit;
+}
+
+.section-content p {
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.content-list {
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.list-itemandlogo {
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.item-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-logo svg {
+    fill: var(--main);
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.logolist svg {
+    fill: var(--main);
+    height: .5rem;
+    width: .5rem;
+}
+
+.item-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    font-family: inherit;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.content-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: inherit;
+    margin-left: 4rem;
+    z-index: 1000;
+}
+
+.mainsection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: inherit;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.color {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.color:hover {
+    opacity: 1;
+    transition: all .2s;
+}
+
+.down {
+    right: 2.5rem;
+}
+
+.color svg {
+    fill: var(--main);
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#moon {
+    display: none;
+}
+
+
+/* animations */
+@keyframes cursorani {
+    from {
+        opacity: 1;
+        width:inherit;
+    }
+    to {
+        opacity: 0;
+        width: 0;
+    }
+}
+
+@keyframes cursorani2 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes spinmerightround {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes arrowsright {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(100%, 0);
+    }
+}
+
+@keyframes arrowsleft {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+@keyframes turnon {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes namepanelani {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 55rem;
+    }
+}
+
+@keyframes namepaneltextani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        height: auto;
+    }
+
+    .namepanel {
+        width: 40rem;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .circle {
+        display: none;
+    }
+
+    .namepanel {
+        width: 100%;
+        margin-bottom: 2rem;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .content {
+        padding: 1rem 1rem;
+        flex-direction: column;
+    }
+
+    .content-small {
+        flex-direction: row;
+    }
+
+    .sidepanel {
+        width: 100%;
+    }
+    
+    .sidesection {
+        width: 100%;
+    }
+    
+    .content-main {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    html {
+        font-size: 12px;
+    }
+}
